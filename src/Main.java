@@ -33,6 +33,22 @@ public class Main {
                         LocalDate.of(2021, 2, 20),
                         List.of(products.get(0), products.get(1)),
                         c2
+                ),
+                new Order(
+                        2,
+                        "ORDERED",
+                        LocalDate.of(2021, 2, 15),
+                        LocalDate.of(2021, 2, 20),
+                        List.of(products.get(0), products.get(1)),
+                        c2
+                ),
+                new Order(
+                        3,
+                        "DELIVERED",
+                        LocalDate.of(2021, 2, 15),
+                        LocalDate.of(2021, 2, 20),
+                        List.of(products.get(0), products.get(1)),
+                        c2
                 )
         );
 
@@ -51,15 +67,18 @@ public class Main {
 //        creando un nuovo oggetto con map()
 //        List<Product> BoyProducts = products.stream().filter(product -> product.getCategory().equals("Boys")).map(product -> new Product(product.getId(), product.getName(), product.getCategory(), product.getPrice() * 0.9)).toList();
 //        modificando l'oggetto iniziale con setPrice
-        List<Product> boyProducts = products.stream()
+        List<Product> BoyProducts = products.stream()
                 .filter(product -> product.getCategory().equals("Boys"))
                 .toList();
 
-        boyProducts.forEach(product ->
+        BoyProducts.forEach(product ->
                 product.setPrice(product.getPrice() * 0.9)
         );
 
         System.out.println(BoyProducts);
+
+//        Es 4
+        List<Product>
     }
 
 }
